@@ -1,6 +1,6 @@
 import ReactDom from "react-dom/client";
 import Navbar from "./Components/Navbar/Navbar.jsx";
-import Herosection from "./Components/herosection.jsx/herosection.jsx";
+import Herosection from "./Components/Herosection.jsx/Herosection.jsx";
 import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
 import Footer from "./Components/Footer/footer.jsx";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router";
