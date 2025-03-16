@@ -1,5 +1,5 @@
 import ReactDom from "react-dom/client";
-import Navbar from "./Components/Navbar/navbar.jsx";
+import Navbar from "./Components/Navbar/Navbar.jsx";
 import Herosection from "./Components/herosection.jsx/herosection.jsx";
 import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
 import Footer from "./Components/Footer/footer.jsx";
