@@ -50,7 +50,7 @@ const Herosection = () => {
     <>
       <div className="mx-auto bg-main">
         <video
-          src="./src/assets/Hero-bg.mov"
+          src="https://ik.imagekit.io/kathiravan/SWTS/Hero-bg.mov/ik-video.mp4"
           autoPlay
           loop
           muted
