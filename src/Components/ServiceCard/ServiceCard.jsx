@@ -8,33 +8,42 @@ const ServiceCard = (props) => {
 
   return (
     <>
-      <div className="transform transition duration-200 hover:scale-105 bg-white mx-auto shadow-xl
-       p-6 space-y-2 rounded-lg border-black border h-[450px] w-[300px]">
-        <LazyLoadImage
-          alt="Product Card image"
-          effect="blur"
-          className="rounded-lg mx-auto h-[60%]"
-          wrapperProps={{
-            // If you need to, you can tweak the effect transition using the wrapper style.
-            style: { transitionDelay: "1s" },
-          }}
-          src={`${props.product_image}?timestamp=${new Date().getTime()}`}
-        />
-        <p className="font-[Inter] font-normal text-[18px] leading-[22px] text-[#183A57]">
-          {props.product_title}
-        </p>
-        <p className="flex flex-row items-center gap-1 fond-[Roboto] font-bold text-[20px] leading-[28px] text-black">
-          ₹{formatPrice(props.product_price)}
-        </p>
-        <div className="flex flex-row justify-between gap-4">
-          <button className="flex flex-row items-center gap-1 fond-[Roboto] font-normal text-[18px] leading-[28px] text-black">
-            Rating - {props.product_rating}
+      <div
+        className="transform transition duration-200 hover:scale-105 bg-white mx-auto shadow-xl
+       p-6 rounded-lg border-black border h-[350px] w-[400px] "
+      >
+        <div className="grid sd:grid-cols-1 md:grid-cols-2 mx-auto">
+          <div>
+            <LazyLoadImage
+              alt="Product Card image"
+              effect="blur"
+              className="rounded-lg mx-auto h-[60%]"
+              wrapperProps={{
+                style: { transitionDelay: "1s" },
+              }}
+              src={`${props.product_image}?timestamp=${new Date().getTime()}`}
+            />
+          </div>
+
+          <div className="flex flex-col mt-3 gap-8 justify-start items-center">
+            <p className="font-[Inter] font-bold text-[24px] text-center leading-[24px] text-[#183A57]">
+              {props.product_title}
+            </p>
+
+            <Link
+              to="https://dev.objectivefiberselection.com/signin"
+              target="_blank"
+            >
+              <button className="flex flex-row mx-auto gap-1 fond-[Roboto] font-medium text-[16px] leading-[21px] rounded-lg p-2 bg-[#BDA000] text-white">
+                Get started
+              </button>
+            </Link>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <button className=" fond-[Roboto] font-normal text-[20px] leading-[28px] text-black">
+            Description - {props.product_description}
           </button>
-          <Link to={"/product/" + props.id}>
-            <button className="flex flex-row items-center gap-1 fond-[Roboto] font-medium text-[16px] leading-[21px] rounded-lg p-2 bg-[#BDA000] text-white">
-              Buy Now
-            </button>
-          </Link>
         </div>
       </div>
     </>

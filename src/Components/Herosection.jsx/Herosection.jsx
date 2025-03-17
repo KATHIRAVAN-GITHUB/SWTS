@@ -61,7 +61,7 @@ const Herosection = () => {
             Optimize Your Textile Production with Precision!
           </h1>
           <Link
-            to="/"
+            to="/service"
             className="transform transition duration-200 hover:scale-110 font-[Inter] font-medium text-center text-[20px] leading-[32px] p-2 border-yellow-500 border rounded-lg"
           >
             Get Started

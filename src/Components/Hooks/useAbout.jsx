@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
 
-const useService = () => {
+const useAbout = () => {
   const [isLoading, setisloading] = useState(false);
-  const [data, setData] = useState([]);
+  const [data1, setData1] = useState([]);
 
   useEffect(() => {
-    fetchAbout();
+    setisloading(true);
+    fetchProductData();
   }, []);
 
-  const fetchAbout = async () => {
+  const fetchProductData = async () => {
     try {
       setisloading(true);
-      const res = await fetch("https://swts-api.onrender.com/GetCard", {
+      const res = await fetch("http://localhost:2006/GetAbout", {
         method: "GET", // Since your backend expects a POST request
-        headers: { "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "true" },
+        headers: { "Content-Type": "application/json"
+           },
       });
 
       if (!res.ok) {
@@ -22,7 +23,7 @@ const useService = () => {
       }
 
       const data = await res.json();
-      setData(data); // No need for data.GetCard, just set the array directly
+      setData1(data); // No need for data.GetCard, just set the array directly
     } catch (error) {
       console.error("Error fetching products:", error);
     } finally {
@@ -30,7 +31,7 @@ const useService = () => {
     }
   };
 
-  return { data,isLoading };
+  return { data1,isLoading };
 };
 
-export default useService;
+export default useAbout;

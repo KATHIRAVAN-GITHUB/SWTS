@@ -26,7 +26,7 @@ const Service = () => {
           </p>
         </div>
 
-        <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="w-[90%] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
           {data.map((items) => {
             return (
               <ServiceCard
@@ -34,8 +34,7 @@ const Service = () => {
                 id={items.id}
                 product_image={items.productimage}
                 product_title={items.producttitle}
-                product_rating={items.rating}
-                product_price={items.price}
+                product_description={items.description}
               />
             );
           })}
